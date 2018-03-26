@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="theBetDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Group" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="theBetDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Team" EntityType="Self.Team" />
+    <EntitySet Name="Game" EntityType="theBetDBModel.Game" />
+    <EntitySet Name="Player" EntityType="theBetDBModel.Player" />
+    <EntitySet Name="QuestionAnswer" EntityType="theBetDBModel.QuestionAnswer" />
+    <EntitySet Name="QuestionType" EntityType="theBetDBModel.QuestionType" />
+    <EntitySet Name="Stage" EntityType="theBetDBModel.Stage" />
+    <EntitySet Name="User" EntityType="theBetDBModel.User" />
+    <EntitySet Name="UserBet" EntityType="theBetDBModel.UserBet" />
+    <EntitySet Name="Question" EntityType="theBetDBModel.Question" />
+  </EntityContainer>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Team1Id" Type="Int32" />
+    <Property Name="Team2Id" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Team1Goals" Type="Int32" />
+    <Property Name="Team2Goals" Type="Int32" />
+    <Property Name="Stage" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OpenForBet" Type="Boolean" Nullable="false" />
+    <Property Name="Team1Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Team2Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TeamId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="QuestionAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="QuestionId" Type="Int32" Nullable="false" />
+    <Property Name="Answer" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuestionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsVerified" Type="Boolean" Nullable="false" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserBet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="GameId" Type="Int32" />
+    <Property Name="UserTeam1Goals" Type="Int32" />
+    <Property Name="UserTeam2Goals" Type="Int32" />
+    <Property Name="Points" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="QuestionText" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionType" Type="Int32" />
+  </EntityType>
+</Schema>

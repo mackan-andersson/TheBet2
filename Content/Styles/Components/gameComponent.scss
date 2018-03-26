@@ -1,0 +1,71 @@
+﻿@import '../Variables/fonts.scss';
+.games-container {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .game-info {
+        font-size: 12px;
+        font-weight: 600;
+        justify-content: center;
+    }
+
+    .game-info, .teams-container {
+        display: flex;
+        width: 320px;
+    }
+
+    .teams-container {
+        .team-container {
+            width: 50%;
+
+            &:first-of-type {
+                text-align: right;
+            }
+        }
+
+        label{
+            font-size:18px;
+        }
+
+        input {
+            width: 36px;
+            font-family: Rubik-Black;
+            font-size: 28px;
+            text-align: center;
+            margin: 0 8px;
+            background-color: transparent;
+            z-index:1;
+        }
+
+        .flag {
+            &.before:before {
+                top: -6px;
+                left: 9px;
+            }
+
+            &.after:before {
+                top: -6px;
+                right: 9px;
+            }
+        }
+    }
+
+    .vs-span {
+        font-size: 28px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

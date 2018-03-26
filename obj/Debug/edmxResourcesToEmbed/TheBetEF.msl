@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="theBetDBModelStoreContainer" CdmEntityContainer="theBetDBEntities">
+    <EntitySetMapping Name="Team">
+      <EntityTypeMapping TypeName="theBetDBModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Game">
+      <EntityTypeMapping TypeName="theBetDBModel.Game">
+        <MappingFragment StoreEntitySet="Game">
+          <ScalarProperty Name="Team2Name" ColumnName="Team2Name" />
+          <ScalarProperty Name="Team1Name" ColumnName="Team1Name" />
+          <ScalarProperty Name="OpenForBet" ColumnName="OpenForBet" />
+          <ScalarProperty Name="Stage" ColumnName="Stage" />
+          <ScalarProperty Name="Team2Goals" ColumnName="Team2Goals" />
+          <ScalarProperty Name="Team1Goals" ColumnName="Team1Goals" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Team2Id" ColumnName="Team2Id" />
+          <ScalarProperty Name="Team1Id" ColumnName="Team1Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Player">
+      <EntityTypeMapping TypeName="theBetDBModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionAnswer">
+      <EntityTypeMapping TypeName="theBetDBModel.QuestionAnswer">
+        <MappingFragment StoreEntitySet="QuestionAnswer">
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionType">
+      <EntityTypeMapping TypeName="theBetDBModel.QuestionType">
+        <MappingFragment StoreEntitySet="QuestionType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stage">
+      <EntityTypeMapping TypeName="theBetDBModel.Stage">
+        <MappingFragment StoreEntitySet="Stage">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="theBetDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserBet">
+      <EntityTypeMapping TypeName="theBetDBModel.UserBet">
+        <MappingFragment StoreEntitySet="UserBet">
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="UserTeam2Goals" ColumnName="UserTeam2Goals" />
+          <ScalarProperty Name="UserTeam1Goals" ColumnName="UserTeam1Goals" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Question">
+      <EntityTypeMapping TypeName="theBetDBModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

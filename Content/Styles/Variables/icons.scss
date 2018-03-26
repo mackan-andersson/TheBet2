@@ -1,0 +1,114 @@
+﻿@import 'colors.scss';
+.flag {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        display: inline-block;
+        content: ' ';
+        background-size: 34px 24px;
+        height: 24px;
+        width: 34px;
+        opacity: .2;
+        border: solid 0.5px $color-grey;
+    }
+}
+
+.Argentina:before {
+    background-image: url('/Content/Images/ar.svg');
+}
+.Australia:before {
+    background-image: url('/Content/Images/au.svg');
+}
+.Belgium:before {
+    background-image: url('/Content/Images/be.svg');
+}
+.Brazil:before {
+    background-image: url('/Content/Images/br.svg');
+}
+.Colombia:before {
+    background-image: url('/Content/Images/co.svg');
+}
+.Costa:before {
+    background-image: url('/Content/Images/cr.svg');
+}
+.Croatia:before {
+    background-image: url('/Content/Images/hr.svg');
+}
+.Denmark:before {
+    background-image: url('/Content/Images/dk.svg');
+}
+.Egypt:before {
+    background-image: url('/Content/Images/eg.svg');
+}
+.France:before {
+    background-image: url('/Content/Images/fr.svg');
+}
+.Germany:before {
+    background-image: url('/Content/Images/de.svg');
+}
+.Spain:before {
+    background-image: url('/Content/Images/es.svg');
+}
+.England:before {
+    background-image: url('/Content/Images/gb-eng.svg');
+}
+.Iran:before {
+    background-image: url('/Content/Images/ir.svg');
+}
+.Iceland:before {
+    background-image: url('/Content/Images/is.svg');
+}
+.Japan:before {
+    background-image: url('/Content/Images/jp.svg');
+}
+.Korea:before {
+    background-image: url('/Content/Images/kr.svg');
+}
+.Morocco:before {
+    background-image: url('/Content/Images/ma.svg');
+}
+.Mexico:before {
+    background-image: url('/Content/Images/mx.svg');
+}
+.Panama:before {
+    background-image: url('/Content/Images/pa.svg');
+}
+.Peru:before {
+    background-image: url('/Content/Images/pe.svg');
+}
+.Poland:before {
+    background-image: url('/Content/Images/pl.svg');
+}
+.Portugal:before {
+    background-image: url('/Content/Images/pt.svg');
+}
+.Serbia:before {
+    background-image: url('/Content/Images/rs.svg');
+}
+.Russia:before {
+    background-image: url('/Content/Images/ru.svg');
+}
+.Switzerland:before {
+    background-image: url('/Content/Images/ch.svg');
+}
+.Saudi:before {
+    background-image: url('/Content/Images/sa.svg');
+}
+.Sweden:before {
+    background-image: url('/Content/Images/se.svg');
+}
+.Senegal:before {
+    background-image: url('/Content/Images/sn.svg');
+}
+.Tunisia:before {
+    background-image: url('/Content/Images/tn.svg');
+}
+.Uruguay:before {
+    background-image: url('/Content/Images/uy.svg');
+}
+.Nigeria:before {
+    background-image: url('/Content/Images/ng.svg');
+}
+
+
