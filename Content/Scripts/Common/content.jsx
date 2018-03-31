@@ -1,26 +1,40 @@
 ﻿import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {
-    Route,
-    NavLink,
-    HashRouter
-} from "react-router-dom";
-import Home from "../Pages/Home.jsx";
-import Results from "../Pages/results.jsx";
-import Table from "../Pages/table.jsx";
-import Bet from "../Pages/bet.jsx";
-import Faq from "../Pages/faq.jsx";
-import LoginRegister from "../Pages/loginRegister.jsx";
+import Home from '../Pages/home.jsx';
+import Bet from '../Pages/bet.jsx';
+import Table from '../Pages/table.jsx';
+
 
 class Content extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeContent: this.props.activeContent
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.activeContent !== this.props.activeContent) {
+            this.setState({ activeContent: nextProps.activeContent });
+        }
+    }
+
     render() {
+        const activeContent = this.state.activeContent;
+        function contentToRender() {
+            if (activeContent.bet) {
+                return <Bet />;
+            }
+            else if (activeContent.table) {
+                return <Table />;
+            }
+            else {
+                return <Home />;
+            }
+        }
         return (
             <div className="content-container">
-                <Route exact path="/" component={Home} />
-                <Route path="/bet" component={Bet} />
-                <Route path="/results" component={Results} />
-                <Route path="/table" component={Table} />
-                <Route path="/faq" component={Faq} />
+                {contentToRender()}
             </div>
         );
     }

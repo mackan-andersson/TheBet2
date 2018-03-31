@@ -120,15 +120,14 @@
     <Content Include="Content\Images\tn.svg" />
     <Content Include="Content\Images\uy.svg" />
     <Content Include="Content\Scripts\Common\content.jsx" />
+    <Content Include="Content\Scripts\Common\footer.jsx" />
     <Content Include="Content\Scripts\Common\header.jsx" />
     <Content Include="Content\Scripts\Components\gamesComponent.jsx" />
     <Content Include="Content\Scripts\Pages\bet.jsx" />
-    <Content Include="Content\Scripts\Pages\faq.jsx" />
     <Content Include="Content\Scripts\Pages\home.jsx" />
     <Content Include="Content\Scripts\main.js" />
     <Content Include="Content\Scripts\main.jsx" />
     <Content Include="Content\Scripts\Pages\loginRegister.jsx" />
-    <Content Include="Content\Scripts\Pages\results.jsx" />
     <Content Include="Content\Scripts\Pages\table.jsx" />
     <Content Include="Content\Scripts\Vendor\jquery.min.js" />
     <Content Include="TheBetEF.Context.tt">
@@ -160,6 +159,7 @@
     <Content Include="Content\Fonts\Roboto-Light.ttf" />
     <Content Include="Content\Styles\Pages\bet.scss" />
     <Content Include="Content\Styles\Components\gameComponent.scss" />
+    <Content Include="Content\Styles\Common\footer.scss" />
     <None Include="Content\Styles\Variables\icons.scss" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

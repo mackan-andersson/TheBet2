@@ -1,13 +1,12 @@
 ﻿import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {
-    Route,
-    NavLink,
-    HashRouter,
-    Redirect
-} from "react-router-dom";
 import Header from "./Common/header.jsx";
+import Footer from "./Common/footer.jsx";
 import Content from "./Common/content.jsx";
+import LoginRegister from "./Pages/loginRegister.jsx";
+
+
+
 
 
 
@@ -16,11 +15,14 @@ class Main extends Component {
         super(props);
         this.state = {
             currentUser: null,
-            goToStart: false
+            goToStart: false,
+            activeContent: {home: true, bet:false, table:false }
         };
 
         this.setCurrentUser = this.setCurrentUser.bind(this);
         this.getUserCookie = this.getUserCookie.bind(this);
+        this.logoutCurrentUser = this.logoutCurrentUser.bind(this);
+        this.changeContent = this.changeContent.bind(this);
     }
 
     componentDidMount() {
@@ -44,7 +46,6 @@ class Main extends Component {
             localStorage.removeItem("tbCurrentUser");
             document.cookie = 'tbCurrentUser=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         }
-        this.setState({ currentUser: null });
     }
 
     getUserCookie() {
@@ -61,14 +62,29 @@ class Main extends Component {
         }
     }
 
+    logoutCurrentUser() {
+        this.setCurrentUser(null);
+    }
+
+    changeContent(requestedContent) {
+        this.setState({ activeContent: requestedContent });
+    }
+
     render() {
+        const currentUser = this.state.currentUser;
+        function isLoggedIn() {
+            return currentUser ? true : false;
+        }
+
         return (
-            <HashRouter>
-                <div className="route-wrapper">
-                    <Header setCurrentUserInRoot={this.setCurrentUser} currentUser={this.state.currentUser} />
-                    <Content currentUser={this.state.currentUser}></Content>
+            <div className="main-container">
+                <Header />
+                <a onClick={this.logoutCurrentUser}>Get Out</a>
+                <div className="content-container">
+                    {isLoggedIn() ? <Content currentUser={this.state.currentUser} activeContent={this.state.activeContent} /> : <LoginRegister setCurrentUserInRoot={this.setCurrentUser} />}
                 </div>
-            </HashRouter>
+                <Footer changeContent={this.changeContent} />
+            </div>
             )
     };
 }

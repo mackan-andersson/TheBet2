@@ -33,7 +33,7 @@ class LoginRegister extends Component {
         const user = { Name: this.state.loginName, Password: this.state.loginPassword};
         axios.post('/user/login', user).then(response => {
             if(response.data.user !== null) {
-                this.props.setCurrentUserInHeader(response.data.user);
+                this.props.setCurrentUserInRoot(response.data.user);
             }
         }).catch(function (error) {
             console.log(error);
@@ -45,7 +45,7 @@ class LoginRegister extends Component {
         axios.post('/user/register', user).then(function (response) {
             console.log(response);
             if (response.data.user !== null) {
-                this.props.setCurrentUserInHeader(response.data.user);
+                this.props.setCurrentUserInRoot(response.data.user);
             }
         })
         .catch(function (error) {
