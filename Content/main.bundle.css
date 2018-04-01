@@ -1,34 +1,42 @@
-/*@import url('https://fonts.googleapis.com/css?family=Rubik');*/
 @font-face {
-  font-family: 'Rubik-Black';
-  src: url("/Content/Fonts/Rubik-Black.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url("/Content/Fonts/Roboto-Light.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url("/Content/Fonts/Roboto-Regular.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 .header-container {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  background-color: #ffc430; }
   .header-container h1 {
-    font-size: 32px;
-    font-family: Rubik-Black; }
+    font-size: 36px;
+    font-family: AmaticSC-Bold; }
 
 .footer-container {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  border-top: 1px solid #fff;
   z-index: 1;
-  background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .footer-container .tb-btn {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    font-size: 18px;
+    margin: 0 10px;
+    background-color: #000;
+    color: #ffc430; }
+    .footer-container .tb-btn.active {
+      background-color: #ffc430;
+      color: #000; }
 
 .login-form-container, .register-form-container {
   margin-top: 32px;
@@ -47,83 +55,64 @@
 .register-form-container {
   display: none; }
 
-/*@import url('https://fonts.googleapis.com/css?family=Rubik');*/
 @font-face {
-  font-family: 'Rubik-Black';
-  src: url("/Content/Fonts/Rubik-Black.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url("/Content/Fonts/Roboto-Light.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Roboto-Regular';
-  src: url("/Content/Fonts/Roboto-Regular.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
-.games-container ul {
-  list-style: none;
-  padding: 0; }
-
-.games-container li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 24px; }
-
-.games-container .game-info {
-  font-size: 12px;
-  font-weight: 600;
-  justify-content: center; }
-
-.games-container .game-info, .games-container .teams-container {
-  display: flex;
-  width: 320px; }
-
-.games-container .teams-container .team-container {
-  width: 50%; }
-  .games-container .teams-container .team-container:first-of-type {
-    text-align: right; }
-
-.games-container .teams-container label {
-  font-size: 18px; }
-
-.games-container .teams-container input {
-  width: 36px;
-  font-family: Rubik-Black;
-  font-size: 28px;
-  text-align: center;
-  margin: 0 8px;
-  background-color: transparent;
-  z-index: 1; }
-
-.games-container .teams-container .flag.before:before {
-  top: -6px;
-  left: 9px; }
-
-.games-container .teams-container .flag.after:before {
-  top: -6px;
-  right: 9px; }
-
-.games-container .vs-span {
-  font-size: 28px; }
-
-.games-container input[type=number]::-webkit-inner-spin-button,
-.games-container input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-/*@import url('https://fonts.googleapis.com/css?family=Rubik');*/
-@font-face {
-  font-family: 'Rubik-Black';
-  src: url("/Content/Fonts/Rubik-Black.ttf") format("truetype"); }
+.games-container {
+  font-family: AmaticSC-Bold; }
+  .games-container ul {
+    list-style: none;
+    padding: 0; }
+  .games-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px; }
+  .games-container .game-info {
+    font-size: 12px;
+    font-weight: 600;
+    justify-content: center; }
+  .games-container .game-info, .games-container .teams-container {
+    display: flex;
+    width: 320px; }
+  .games-container .teams-container .team-container {
+    width: 50%; }
+    .games-container .teams-container .team-container:first-of-type {
+      text-align: right; }
+  .games-container .teams-container label {
+    font-size: 18px; }
+  .games-container .teams-container input {
+    width: 36px;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 8px;
+    background-color: transparent;
+    z-index: 1; }
+  .games-container .teams-container .flag.before:before {
+    top: -6px;
+    left: 9px; }
+  .games-container .teams-container .flag.after:before {
+    top: -6px;
+    right: 9px; }
+  .games-container .vs-span {
+    font-size: 28px; }
+  .games-container input[type=number]::-webkit-inner-spin-button,
+  .games-container input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
 
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url("/Content/Fonts/Roboto-Light.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Roboto-Regular';
-  src: url("/Content/Fonts/Roboto-Regular.ttf") format("truetype"); }
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 .flag {
   position: relative; }
@@ -240,7 +229,7 @@ html, body {
 body {
   font-size: 16px;
   margin: 0;
-  font-family: Roboto-Regular;
+  font-family: AmaticSC-Regular;
   font-style: normal; }
 
 h1, h2, h3, p, span, a {
@@ -249,7 +238,7 @@ h1, h2, h3, p, span, a {
   text-decoration: none; }
 
 h1 {
-  font-family: Rubik-Black; }
+  font-family: AmaticSC-Bold; }
 
 h2 {
   margin-bottom: 24px;
@@ -264,7 +253,7 @@ input[type="text"], .tb-input, .tb-btn {
 .tb-input {
   border: 0;
   border-bottom: 1px solid #d1d1d1;
-  font-family: Roboto-Regular;
+  font-family: AmaticSC-Regular;
   color: #000;
   position: relative;
   font-size: 16px; }
@@ -291,7 +280,8 @@ input[type="text"], .tb-input, .tb-btn {
 .tb-btn {
   padding: 8px;
   border: solid 1px black;
-  display: inline-block; }
+  display: inline-block;
+  font-family: AmaticSC-Bold; }
   .tb-btn:hover {
     cursor: pointer; }
 

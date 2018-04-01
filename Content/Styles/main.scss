@@ -2,7 +2,7 @@
 @import "Common/footer.scss";
 @import "Pages/loginRegister.scss";
 @import "Pages/bet.scss";
-@import "Components/gameComponent.scss";
+@import "Components/games.scss";
 @import "Variables/colors.scss";
 @import "Variables/fonts.scss";
 @import "Variables/icons.scss";
@@ -16,7 +16,7 @@ html,body{
 body {
     font-size: 16px;
     margin: 0;
-    font-family:Roboto-Regular;
+    font-family:AmaticSC-Regular;
     font-style: normal;
 }
 
@@ -27,7 +27,7 @@ h1, h2, h3, p, span, a {
 }
 
 h1 {
-    font-family: Rubik-Black;
+    font-family: AmaticSC-Bold;
 }
 
 h2 {
@@ -46,7 +46,7 @@ input[type="text"],.tb-input,.tb-btn {
 .tb-input {
     border: 0;
     border-bottom: 1px solid $color-grey;
-    font-family: Roboto-Regular;
+    font-family: AmaticSC-Regular;
     color: $color-black;
     position: relative;
     font-size:16px;
@@ -83,6 +83,7 @@ input[type="text"],.tb-input,.tb-btn {
     padding: 8px;
     border: solid 1px black;
     display: inline-block;
+    font-family: AmaticSC-Bold;
     &:hover {
         cursor: pointer;
     }

@@ -1,5 +1,6 @@
 ﻿import React, { Component } from "react";
-import GamesComponent from "../Components/gamesComponent.jsx";
+import Games from "../Components/games.jsx";
+import Loader from "../Components/loader.jsx";
 import { Route, Redirect } from 'react-router';
 import { withRouter } from "react-router-dom";
 var axios = require('axios');
@@ -9,7 +10,8 @@ class Bet extends Component {
         super(props);
         this.state = {
             currentUser: null,
-            games: []
+            games: [],
+            isLoading: true
         };
 
         this.getUserFromStorage = this.getUserFromStorage.bind(this);
@@ -30,9 +32,11 @@ class Bet extends Component {
     }
 
     getTheBet(user) {
+        this.setState({ isLoading: true });
         axios.post('/bet/getTheBet', user).then(response => {
             console.log(response);
             this.setState({ games: response.data.gameList });
+            this.setState({ isLoading: false });
         })
         .catch(function (error) {
             console.log(error);
@@ -52,7 +56,7 @@ class Bet extends Component {
     render() {
         return (
             <div className="bet-container">
-                <GamesComponent games={this.state.games} />
+                {this.state.isLoading ? <Loader isLoading={this.state.isLoading} /> : <Games games={this.state.games} />}
             </div>
         );
     }

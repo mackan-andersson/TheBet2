@@ -1,13 +1,28 @@
 ﻿@import '../Variables/colors.scss';
-.footer-container{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    border-top:1px solid $color-white;
-    z-index:1;
-    background-color:$color-white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color:rgba(255,255,255,0.5);
+
+    .tb-btn {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        font-size: 18px;
+        margin:0 10px;
+        background-color:$color-black;
+        color:$color-primary;
+        &.active{
+            background-color:$color-primary;
+            color:$color-black;
+        }
+    }
 }

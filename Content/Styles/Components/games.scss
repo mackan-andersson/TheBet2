@@ -1,5 +1,6 @@
 ﻿@import '../Variables/fonts.scss';
 .games-container {
+    font-family: AmaticSC-Bold;
     ul {
         list-style: none;
         padding: 0;
@@ -38,7 +39,7 @@
 
         input {
             width: 36px;
-            font-family: Rubik-Black;
+            
             font-size: 28px;
             text-align: center;
             margin: 0 8px;

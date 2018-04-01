@@ -108,6 +108,7 @@
     <Content Include="Content\Images\kr.svg" />
     <Content Include="Content\Images\ma.svg" />
     <Content Include="Content\Images\mx.svg" />
+    <Content Include="Content\Images\ng.svg" />
     <Content Include="Content\Images\pa.svg" />
     <Content Include="Content\Images\pe.svg" />
     <Content Include="Content\Images\pl.svg" />
@@ -122,7 +123,8 @@
     <Content Include="Content\Scripts\Common\content.jsx" />
     <Content Include="Content\Scripts\Common\footer.jsx" />
     <Content Include="Content\Scripts\Common\header.jsx" />
-    <Content Include="Content\Scripts\Components\gamesComponent.jsx" />
+    <Content Include="Content\Scripts\Components\games.jsx" />
+    <Content Include="Content\Scripts\Components\loader.jsx" />
     <Content Include="Content\Scripts\Pages\bet.jsx" />
     <Content Include="Content\Scripts\Pages\home.jsx" />
     <Content Include="Content\Scripts\main.js" />
@@ -130,6 +132,10 @@
     <Content Include="Content\Scripts\Pages\loginRegister.jsx" />
     <Content Include="Content\Scripts\Pages\table.jsx" />
     <Content Include="Content\Scripts\Vendor\jquery.min.js" />
+    <Content Include="Content\Styles\Vendor\font-awesome\css\fontawesome-all.min.css" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.svg" />
     <Content Include="TheBetEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TheBetEF.Context.cs</LastGenOutput>
@@ -153,14 +159,25 @@
     <Content Include="TheBetEF.edmx.diagram">
       <DependentUpon>TheBetEF.edmx</DependentUpon>
     </Content>
-    <Content Include="Content\Fonts\Rubik-Black.ttf" />
     <Content Include="Content\Styles\Pages\loginRegister.scss" />
-    <Content Include="Content\Fonts\Roboto-Regular.ttf" />
-    <Content Include="Content\Fonts\Roboto-Light.ttf" />
     <Content Include="Content\Styles\Pages\bet.scss" />
-    <Content Include="Content\Styles\Components\gameComponent.scss" />
+    <Content Include="Content\Styles\Components\games.scss" />
     <Content Include="Content\Styles\Common\footer.scss" />
+    <Content Include="Content\Fonts\AmaticSC-Bold.ttf" />
+    <Content Include="Content\Fonts\AmaticSC-Regular.ttf" />
     <None Include="Content\Styles\Variables\icons.scss" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -34,9 +34,9 @@ class Footer extends Component {
         return (
             <div className="footer-container">
                 <nav>
-                    <a onClick={this.requestHome}>Home</a>
-                    <a onClick={this.requestBet}>BET</a>
-                    <a onClick={this.requestTable}>TABLE</a>
+                    <button className={"tb-btn " + (this.state.activeContent.home ? 'active' : '')} onClick={this.requestHome}><span>HOME</span></button>
+                    <button className={"tb-btn " + (this.state.activeContent.bet ? 'active' : '')} onClick={this.requestBet}><span>BET</span></button>
+                    <button className={"tb-btn " + (this.state.activeContent.table ? 'active' : '')} onClick={this.requestTable}><span>TABLE</span></button>
                 </nav>
             </div>
         );

@@ -2,7 +2,7 @@
 import Moment from "moment";
  
 
-class GamesComponent extends Component {
+class Games extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,24 +36,6 @@ class GamesComponent extends Component {
                         <label htmlFor={'team2-' + game.gameId}>{game.team2Name}</label>
                     </div>
                 </div>
-                {/*<div className="game-info">
-                    <p className="date">{Moment(game.gameTime).format("YYYY-MM-DD HH:mm")}</p>
-                    <p className="stage">{game.stage}</p>
-                </div>
-                <div className="teams-container">
-                    <div className="team-container">
-                        <label htmlFor="team1-bet">{game.team1Name}</label>
-                        <input type="number" className="tb-input" id="team1-bet" name="team1" max="20" />
-                    </div>
-                    <div className="vs-container">
-                        <p>-</p>
-                        <p className="large-vs">-</p>
-                    </div>
-                    <div className="team-container">
-                        <label htmlFor="team2-bet">{game.team2Name}</label>
-                        <input type="number" className="tb-input" id="team2-bet" name="team2" max="20" />
-                    </div>
-                </div>*/}
             </li>
         );
         return (
@@ -66,4 +48,4 @@ class GamesComponent extends Component {
     }
 }
 
-export default GamesComponent;
+export default Games;
