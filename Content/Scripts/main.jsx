@@ -16,7 +16,7 @@ class Main extends Component {
         this.state = {
             currentUser: null,
             goToStart: false,
-            activeContent: {home: true, bet:false, table:false }
+            activeContent: {home: true, bet:false, table:false, contact:false }
         };
 
         this.setCurrentUser = this.setCurrentUser.bind(this);
@@ -79,11 +79,9 @@ class Main extends Component {
         return (
             <div className="main-container">
                 <Header />
-                <a onClick={this.logoutCurrentUser}>Get Out</a>
-                <div className="content-container">
-                    {isLoggedIn() ? <Content currentUser={this.state.currentUser} activeContent={this.state.activeContent} /> : <LoginRegister setCurrentUserInRoot={this.setCurrentUser} />}
-                </div>
-                <Footer changeContent={this.changeContent} />
+                {isLoggedIn() ? <Content currentUser={this.state.currentUser} activeContent={this.state.activeContent} /> : <LoginRegister setCurrentUserInRoot={this.setCurrentUser} />}
+                {isLoggedIn() ? <Footer changeContent={this.changeContent} logout={this.logoutCurrentUser} /> : null}
+                
             </div>
             )
     };

@@ -1,0 +1,14 @@
+﻿@import '../Variables/fonts.scss';
+@import '../Variables/colors.scss';
+
+.loader-container {
+    text-align:center;
+    .spinner-container{
+        margin:64px 0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        font-size:42px;
+        font-family:AmaticSC-Bold;
+    }
+}

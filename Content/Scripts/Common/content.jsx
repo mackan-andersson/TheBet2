@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Home from '../Pages/home.jsx';
 import Bet from '../Pages/bet.jsx';
 import Table from '../Pages/table.jsx';
+import Contact from '../Pages/contact.jsx';
 
 
 class Content extends Component {
@@ -27,6 +28,9 @@ class Content extends Component {
             }
             else if (activeContent.table) {
                 return <Table />;
+            }
+            else if (activeContent.contact) {
+                return <Contact />;
             }
             else {
                 return <Home />;
