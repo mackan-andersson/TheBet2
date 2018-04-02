@@ -7,8 +7,16 @@
   src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'GloriaHallelujah';
-  src: url("/Content/Fonts/GloriaHallelujah.ttf") format("truetype"); }
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
 
 .header-container {
   width: 100%;
@@ -27,8 +35,16 @@
   src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'GloriaHallelujah';
-  src: url("/Content/Fonts/GloriaHallelujah.ttf") format("truetype"); }
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
 
 .footer-container {
   position: fixed;
@@ -90,11 +106,19 @@
   src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'GloriaHallelujah';
-  src: url("/Content/Fonts/GloriaHallelujah.ttf") format("truetype"); }
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
 
 .games-container {
-  font-family: GloriaHallelujah; }
+  font-family: Comfortaa-Regular; }
   .games-container ul {
     list-style: none;
     padding: 0;
@@ -107,9 +131,9 @@
   .games-container li:nth-child(odd) {
     background-color: #f5f5f5; }
   .games-container .game-info {
-    font-size: 14px;
-    font-weight: 600;
-    justify-content: center; }
+    font-size: 12px;
+    justify-content: center;
+    margin-bottom: 10px; }
   .games-container .game-info, .games-container .teams-container {
     display: flex;
     width: 360px; }
@@ -121,20 +145,20 @@
     font-size: 18px; }
   .games-container .teams-container input {
     width: 36px;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
     margin: 0 8px;
     background-color: transparent;
     z-index: 1;
-    height: 36px; }
+    font-family: Comfortaa-Bold; }
   .games-container .teams-container .flag.before:before {
-    top: -2px;
+    top: -8px;
     left: 9px; }
   .games-container .teams-container .flag.after:before {
-    top: -2px;
+    top: -8px;
     right: 9px; }
   .games-container .vs-span {
-    font-size: 28px; }
+    font-size: 20px; }
   .games-container input[type=number]::-webkit-inner-spin-button,
   .games-container input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -149,8 +173,16 @@
   src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'GloriaHallelujah';
-  src: url("/Content/Fonts/GloriaHallelujah.ttf") format("truetype"); }
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
 
 .loader-container {
   text-align: center; }
@@ -159,8 +191,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 42px;
-    font-family: AmaticSC-Bold; }
+    font-size: 32px; }
+    .loader-container .spinner-container i {
+      margin-bottom: 16px; }
 
 @font-face {
   font-family: 'AmaticSC-Bold';
@@ -171,8 +204,16 @@
   src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'GloriaHallelujah';
-  src: url("/Content/Fonts/GloriaHallelujah.ttf") format("truetype"); }
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
 
 .flag {
   position: relative; }
@@ -289,7 +330,7 @@ html, body, .main-container {
 body {
   font-size: 16px;
   margin: 0;
-  font-family: GloriaHallelujah;
+  font-family: Comfortaa-Regular;
   font-style: normal; }
 
 h1, h2, h3, p, span, a {
@@ -310,7 +351,7 @@ input[type="text"], .tb-input, .tb-btn {
 .tb-input {
   border: 0;
   border-bottom: 1px solid #d1d1d1;
-  font-family: GloriaHallelujah;
+  font-family: Comfortaa-Regular;
   color: #000;
   position: relative;
   font-size: 16px; }

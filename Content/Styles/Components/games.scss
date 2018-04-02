@@ -1,27 +1,29 @@
 ﻿@import '../Variables/fonts.scss';
 @import '../Variables/colors.scss';
 .games-container {
-    font-family: GloriaHallelujah;
+    font-family: Comfortaa-Regular;
+
     ul {
         list-style: none;
         padding: 0;
-        margin:0;
+        margin: 0;
     }
 
     li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding:10px 0;
+        padding: 10px 0;
     }
-    li:nth-child(odd){
-        background-color:$color-light-grey;
+
+    li:nth-child(odd) {
+        background-color: $color-light-grey;
     }
 
     .game-info {
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 12px;
         justify-content: center;
+        margin-bottom: 10px;
     }
 
     .game-info, .teams-container {
@@ -38,35 +40,35 @@
             }
         }
 
-        label{
-            font-size:18px;
+        label {
+            font-size: 18px;
         }
 
         input {
             width: 36px;
-            font-size: 28px;
+            font-size: 20px;
             text-align: center;
             margin: 0 8px;
             background-color: transparent;
-            z-index:1;
-            height:36px;
+            z-index: 1;
+            font-family:Comfortaa-Bold;
         }
 
         .flag {
             &.before:before {
-                top: -2px;
+                top: -8px;
                 left: 9px;
             }
 
             &.after:before {
-                top: -2px;
+                top: -8px;
                 right: 9px;
             }
         }
     }
 
     .vs-span {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     input[type=number]::-webkit-inner-spin-button,

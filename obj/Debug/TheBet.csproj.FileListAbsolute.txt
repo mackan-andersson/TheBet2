@@ -114,11 +114,15 @@ C:\Code\TheBet\TheBet\bin\roslyn\VBCSCompiler.exe.config
 C:\Code\TheBet\TheBet\bin\TheBet.dll.config
 C:\Code\TheBet\TheBet\bin\TheBet.dll
 C:\Code\TheBet\TheBet\bin\TheBet.pdb
+C:\Code\TheBet\TheBet\bin\EntityFramework.dll
+C:\Code\TheBet\TheBet\bin\EntityFramework.SqlServer.dll
 C:\Code\TheBet\TheBet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Code\TheBet\TheBet\bin\Newtonsoft.Json.dll
 C:\Code\TheBet\TheBet\bin\System.Net.Http.Formatting.dll
 C:\Code\TheBet\TheBet\bin\System.Web.Http.dll
 C:\Code\TheBet\TheBet\bin\System.Web.Http.WebHost.dll
+C:\Code\TheBet\TheBet\bin\EntityFramework.xml
+C:\Code\TheBet\TheBet\bin\EntityFramework.SqlServer.xml
 C:\Code\TheBet\TheBet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Code\TheBet\TheBet\bin\Newtonsoft.Json.xml
 C:\Code\TheBet\TheBet\bin\System.Net.Http.Formatting.xml
@@ -127,8 +131,4 @@ C:\Code\TheBet\TheBet\bin\System.Web.Http.WebHost.xml
 C:\Code\TheBet\TheBet\obj\Debug\TheBet.csproj.CoreCompileInputs.cache
 C:\Code\TheBet\TheBet\obj\Debug\TheBet.dll
 C:\Code\TheBet\TheBet\obj\Debug\TheBet.pdb
-C:\Code\TheBet\TheBet\bin\EntityFramework.dll
-C:\Code\TheBet\TheBet\bin\EntityFramework.SqlServer.dll
-C:\Code\TheBet\TheBet\bin\EntityFramework.xml
-C:\Code\TheBet\TheBet\bin\EntityFramework.SqlServer.xml
 C:\Code\TheBet\TheBet\obj\Debug\TheBet.csprojResolveAssemblyReference.cache
