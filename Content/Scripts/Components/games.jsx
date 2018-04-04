@@ -16,9 +16,23 @@ class Games extends Component {
         }
     }
 
+    onInputChangeTeam1(index, event) {
+        var tempGames = this.state.games.slice();
+        tempGames[index].userTeam1Goals = event.target.value;
+        this.setState({ games: tempGames });
+        this.props.updateUserBet(tempGames);
+    }
+
+    onInputChangeTeam2(index, event) {
+        var tempGames = this.state.games.slice();
+        tempGames[index].userTeam2Goals = event.target.value;
+        this.setState({ games: tempGames });
+        this.props.updateUserBet(tempGames);
+    }
+
     render() {
         var games = this.state.games;
-        var listItems = games.map((game) =>
+        var listItems = games.map((game,idx) =>
             <li key={game.gameId}>
                 <div className="game-info">
                     <span>{game.stage} - {Moment(game.gameTime).format("YYYY-MM-DD HH:mm")}</span>
@@ -27,11 +41,13 @@ class Games extends Component {
                     <div className="team-container">
                         <label htmlFor={'team1-' + game.gameId}>{game.team1Name}</label>
                         <i className={'flag before ' + game.team1Name}></i>
-                        <input type="number" className="tb-input" id={'team1-' + game.gameId} name="team1" max="20" />
+                        <input type="number" className="tb-input" id={'team1-' + game.gameId} name="team1" max="20" disabled={!game.openForBet}
+                            onChange={this.onInputChangeTeam1.bind(this, idx)} value={game.userTeam1Goals !== null ? game.userTeam1Goals : ''} />
                     </div>
                     <span className="vs-span">-</span>
                     <div className="team-container">
-                        <input type="number" className="tb-input" id={'team2-' + game.gameId} name="team2" max="20" />
+                        <input type="number" className="tb-input" id={'team2-' + game.gameId} name="team2" max="20" disabled={!game.openForBet}
+                            onChange={this.onInputChangeTeam2.bind(this, idx)} value={game.userTeam2Goals !== null ? game.userTeam2Goals : ''} />
                         <i className={'flag after ' + game.team2Name}></i>
                         <label htmlFor={'team2-' + game.gameId}>{game.team2Name}</label>
                     </div>

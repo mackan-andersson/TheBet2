@@ -86,5 +86,39 @@ namespace TheBet.Repositories
             }
         }
 
+        public TheBetEntity SaveUserBet(List<GameEntity> gameList, int userId)
+        {
+            using (var context = new theBetDBEntities())
+            {
+                var returnEntity = new TheBetEntity() { ErrorMsg="", Exception= null, gameList=null };
+                try
+                {
+                    foreach(var game in gameList)
+                    {
+                        var userBet = new UserBet()
+                        {
+                            GameId = game.GameId,
+                            UserId = userId,
+                            UserTeam1Goals = game.UserTeam1Goals,
+                            UserTeam2Goals = game.UserTeam2Goals
+                        };
+                        context.UserBet.Add(userBet);
+                        
+                    }
+                    context.SaveChanges();
+                    return returnEntity;
+                }
+                catch (Exception ex)
+                {
+                    returnEntity.Exception = ex.InnerException.StackTrace;
+                    returnEntity.ErrorMsg = ex.Message;
+                    return returnEntity;
+                }
+            }
+        }
+
+
+
+
     }
 }

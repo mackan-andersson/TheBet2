@@ -4,6 +4,7 @@ import Home from '../Pages/home.jsx';
 import Bet from '../Pages/bet.jsx';
 import Table from '../Pages/table.jsx';
 import Contact from '../Pages/contact.jsx';
+import FAQ from '../Pages/faq.jsx';
 
 
 class Content extends Component {
@@ -31,6 +32,9 @@ class Content extends Component {
             }
             else if (activeContent.contact) {
                 return <Contact />;
+            }
+            else if (activeContent.faq) {
+                return <FAQ />;
             }
             else {
                 return <Home />;

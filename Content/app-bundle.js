@@ -19908,7 +19908,7 @@ var _content = __webpack_require__(187);
 
 var _content2 = _interopRequireDefault(_content);
 
-var _loginRegister = __webpack_require__(237);
+var _loginRegister = __webpack_require__(238);
 
 var _loginRegister2 = _interopRequireDefault(_loginRegister);
 
@@ -37358,6 +37358,7 @@ var Footer = function (_Component) {
         _this.requestBet = _this.requestBet.bind(_this);
         _this.requestTable = _this.requestTable.bind(_this);
         _this.requestContact = _this.requestContact.bind(_this);
+        _this.requestFAQ = _this.requestFAQ.bind(_this);
         _this.toggleExtraChoices = _this.toggleExtraChoices.bind(_this);
         _this.logout = _this.logout.bind(_this);
         return _this;
@@ -37366,7 +37367,7 @@ var Footer = function (_Component) {
     _createClass(Footer, [{
         key: 'requestHome',
         value: function requestHome() {
-            var contentObj = { home: true, bet: false, table: false, contact: false };
+            var contentObj = { home: true, bet: false, table: false, contact: false, faq: false };
             this.setState({ activeContent: contentObj });
             this.setState({ isExtraChoicesToggled: false });
             this.props.changeContent(contentObj);
@@ -37374,7 +37375,7 @@ var Footer = function (_Component) {
     }, {
         key: 'requestBet',
         value: function requestBet() {
-            var contentObj = { home: false, bet: true, table: false, contact: false };
+            var contentObj = { home: false, bet: true, table: false, contact: false, faq: false };
             this.setState({ activeContent: contentObj });
             this.setState({ isExtraChoicesToggled: false });
             this.props.changeContent(contentObj);
@@ -37382,7 +37383,7 @@ var Footer = function (_Component) {
     }, {
         key: 'requestTable',
         value: function requestTable() {
-            var contentObj = { home: false, bet: false, table: true, contact: false };
+            var contentObj = { home: false, bet: false, table: true, contact: false, faq: false };
             this.setState({ activeContent: contentObj });
             this.setState({ isExtraChoicesToggled: false });
             this.props.changeContent(contentObj);
@@ -37390,7 +37391,15 @@ var Footer = function (_Component) {
     }, {
         key: 'requestContact',
         value: function requestContact() {
-            var contentObj = { home: false, bet: false, table: false, contact: true };
+            var contentObj = { home: false, bet: false, table: false, contact: true, faq: false };
+            this.setState({ activeContent: contentObj });
+            this.setState({ isExtraChoicesToggled: false });
+            this.props.changeContent(contentObj);
+        }
+    }, {
+        key: 'requestFAQ',
+        value: function requestFAQ() {
+            var contentObj = { home: false, bet: false, table: false, contact: false, faq: true };
             this.setState({ activeContent: contentObj });
             this.setState({ isExtraChoicesToggled: false });
             this.props.changeContent(contentObj);
@@ -37410,29 +37419,74 @@ var Footer = function (_Component) {
         value: function render() {
             var showExtra = this.state.isExtraChoicesToggled;
             var activeContent = this.state.activeContent;
-            var requestContactFunc = this.requestContact;
+            var requestContact = this.requestContact;
             var logoutFunc = this.logout;
-            function extraContent() {
+            var requestHome = this.requestTable;
+            var requestBet = this.requestBet;
+            var requestTable = this.requestTable;
+            var requestFAQ = this.requestFAQ;
+            function showButtons() {
                 if (showExtra) {
                     return _react2.default.createElement(
                         'div',
-                        { className: 'extra-choices' },
+                        { className: 'button-container' },
                         _react2.default.createElement(
                             'button',
                             { className: 'tb-btn', onClick: logoutFunc },
                             _react2.default.createElement(
                                 'span',
                                 null,
-                                'Logout'
+                                'LOGOUT'
                             )
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: "tb-btn " + (activeContent.contact ? 'active' : ''), onClick: requestContactFunc },
+                            { className: "tb-btn " + (activeContent.contact ? 'active' : ''), onClick: requestContact },
                             _react2.default.createElement(
                                 'span',
                                 null,
-                                'Contact'
+                                'CONTACT'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: "tb-btn " + (activeContent.faq ? 'active' : ''), onClick: requestFAQ },
+                            _react2.default.createElement(
+                                'span',
+                                null,
+                                'FAQ'
+                            )
+                        )
+                    );
+                } else {
+                    return _react2.default.createElement(
+                        'div',
+                        { className: 'button-container' },
+                        _react2.default.createElement(
+                            'button',
+                            { className: "tb-btn " + (activeContent.home ? 'active' : ''), onClick: requestHome },
+                            _react2.default.createElement(
+                                'span',
+                                null,
+                                'HOME'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: "tb-btn " + (activeContent.bet ? 'active' : ''), onClick: requestBet },
+                            _react2.default.createElement(
+                                'span',
+                                null,
+                                'BET'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: "tb-btn " + (activeContent.table ? 'active' : ''), onClick: requestTable },
+                            _react2.default.createElement(
+                                'span',
+                                null,
+                                'TABLE'
                             )
                         )
                     );
@@ -37445,46 +37499,15 @@ var Footer = function (_Component) {
                 _react2.default.createElement(
                     'nav',
                     null,
+                    showButtons(),
                     _react2.default.createElement(
                         'button',
-                        { className: "tb-btn " + (this.state.activeContent.home ? 'active' : ''), onClick: this.requestHome },
+                        { className: "tb-btn " + (this.state.isExtraChoicesToggled ? 'active' : ''), onClick: this.toggleExtraChoices },
                         _react2.default.createElement(
                             'span',
                             null,
-                            'HOME'
+                            '...'
                         )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { className: "tb-btn " + (this.state.activeContent.bet ? 'active' : ''), onClick: this.requestBet },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'BET'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { className: "tb-btn " + (this.state.activeContent.table ? 'active' : ''), onClick: this.requestTable },
-                        _react2.default.createElement(
-                            'span',
-                            null,
-                            'TABLE'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'extra-choices-container' },
-                        _react2.default.createElement(
-                            'button',
-                            { className: "tb-btn " + (this.state.isExtraChoicesToggled ? 'active' : ''), onClick: this.toggleExtraChoices },
-                            _react2.default.createElement(
-                                'span',
-                                null,
-                                '...'
-                            )
-                        ),
-                        extraContent()
                     )
                 )
             );
@@ -37533,6 +37556,10 @@ var _contact = __webpack_require__(236);
 
 var _contact2 = _interopRequireDefault(_contact);
 
+var _faq = __webpack_require__(237);
+
+var _faq2 = _interopRequireDefault(_faq);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37573,6 +37600,8 @@ var Content = function (_Component) {
                     return _react2.default.createElement(_table2.default, null);
                 } else if (activeContent.contact) {
                     return _react2.default.createElement(_contact2.default, null);
+                } else if (activeContent.faq) {
+                    return _react2.default.createElement(_faq2.default, null);
                 } else {
                     return _react2.default.createElement(_home2.default, null);
                 }
@@ -37699,6 +37728,8 @@ var Bet = function (_Component) {
 
         _this.getUserFromStorage = _this.getUserFromStorage.bind(_this);
         _this.getTheBet = _this.getTheBet.bind(_this);
+        _this.saveTheBet = _this.saveTheBet.bind(_this);
+        _this.updateUserBet = _this.updateUserBet.bind(_this);
         return _this;
     }
 
@@ -37740,12 +37771,36 @@ var Bet = function (_Component) {
             }
         }
     }, {
+        key: "saveTheBet",
+        value: function saveTheBet() {
+            var _this3 = this;
+
+            this.setState({ isLoading: true });
+            var userBetObj = { games: this.state.games, user: this.state.currentUser };
+            axios.post('/bet/saveBet', userBetObj).then(function (response) {
+                console.log(response);
+                _this3.setState({ isLoading: false });
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }, {
+        key: "updateUserBet",
+        value: function updateUserBet(games) {
+            this.setState({ games: games });
+        }
+    }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
                 "div",
                 { className: "bet-container" },
-                this.state.isLoading ? _react2.default.createElement(_loader2.default, { isLoading: this.state.isLoading }) : _react2.default.createElement(_games2.default, { games: this.state.games })
+                _react2.default.createElement(
+                    "button",
+                    { onClick: this.saveTheBet, className: "tb-btn save-button" },
+                    "SAVE BET"
+                ),
+                this.state.isLoading ? _react2.default.createElement(_loader2.default, { isLoading: this.state.isLoading }) : _react2.default.createElement(_games2.default, { games: this.state.games, updateUserBet: this.updateUserBet })
             );
         }
     }]);
@@ -37806,10 +37861,28 @@ var Games = function (_Component) {
             }
         }
     }, {
+        key: "onInputChangeTeam1",
+        value: function onInputChangeTeam1(index, event) {
+            var tempGames = this.state.games.slice();
+            tempGames[index].userTeam1Goals = event.target.value;
+            this.setState({ games: tempGames });
+            this.props.updateUserBet(tempGames);
+        }
+    }, {
+        key: "onInputChangeTeam2",
+        value: function onInputChangeTeam2(index, event) {
+            var tempGames = this.state.games.slice();
+            tempGames[index].userTeam2Goals = event.target.value;
+            this.setState({ games: tempGames });
+            this.props.updateUserBet(tempGames);
+        }
+    }, {
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             var games = this.state.games;
-            var listItems = games.map(function (game) {
+            var listItems = games.map(function (game, idx) {
                 return _react2.default.createElement(
                     "li",
                     { key: game.gameId },
@@ -37836,7 +37909,8 @@ var Games = function (_Component) {
                                 game.team1Name
                             ),
                             _react2.default.createElement("i", { className: 'flag before ' + game.team1Name }),
-                            _react2.default.createElement("input", { type: "number", className: "tb-input", id: 'team1-' + game.gameId, name: "team1", max: "20" })
+                            _react2.default.createElement("input", { type: "number", className: "tb-input", id: 'team1-' + game.gameId, name: "team1", max: "20", disabled: !game.openForBet,
+                                onChange: _this2.onInputChangeTeam1.bind(_this2, idx), value: game.userTeam1Goals !== null ? game.userTeam1Goals : '' })
                         ),
                         _react2.default.createElement(
                             "span",
@@ -37846,7 +37920,8 @@ var Games = function (_Component) {
                         _react2.default.createElement(
                             "div",
                             { className: "team-container" },
-                            _react2.default.createElement("input", { type: "number", className: "tb-input", id: 'team2-' + game.gameId, name: "team2", max: "20" }),
+                            _react2.default.createElement("input", { type: "number", className: "tb-input", id: 'team2-' + game.gameId, name: "team2", max: "20", disabled: !game.openForBet,
+                                onChange: _this2.onInputChangeTeam2.bind(_this2, idx), value: game.userTeam2Goals !== null ? game.userTeam2Goals : '' }),
                             _react2.default.createElement("i", { className: 'flag after ' + game.team2Name }),
                             _react2.default.createElement(
                                 "label",
@@ -38184,10 +38259,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _moment = __webpack_require__(0);
-
-var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42340,6 +42411,60 @@ exports.default = Contact;
 
 /***/ }),
 /* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FAQ = function (_Component) {
+    _inherits(FAQ, _Component);
+
+    function FAQ() {
+        _classCallCheck(this, FAQ);
+
+        return _possibleConstructorReturn(this, (FAQ.__proto__ || Object.getPrototypeOf(FAQ)).apply(this, arguments));
+    }
+
+    _createClass(FAQ, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "h1",
+                    null,
+                    "FAQ"
+                )
+            );
+        }
+    }]);
+
+    return FAQ;
+}(_react.Component);
+
+exports.default = FAQ;
+
+/***/ }),
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

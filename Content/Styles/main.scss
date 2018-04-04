@@ -28,7 +28,7 @@ h1, h2, h3, p, span, a {
 }
 
 h1 {
-    font-family: AmaticSC-Bold;
+    font-family: Comfortaa-Bold;
 }
 
 h2 {
@@ -81,7 +81,8 @@ input[type="text"],.tb-input,.tb-btn {
     padding: 8px;
     border: solid 1px black;
     display: inline-block;
-    font-family: AmaticSC-Bold;
+    font-family: Comfortaa-Bold;
+    background-color:$color-white;
     &:hover {
         cursor: pointer;
     }

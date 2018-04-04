@@ -16,6 +16,8 @@ class Bet extends Component {
 
         this.getUserFromStorage = this.getUserFromStorage.bind(this);
         this.getTheBet = this.getTheBet.bind(this);
+        this.saveTheBet = this.saveTheBet.bind(this);
+        this.updateUserBet = this.updateUserBet.bind(this);
     }
 
     componentDidMount() {
@@ -53,10 +55,27 @@ class Bet extends Component {
         }
     }
 
+    saveTheBet() {
+        this.setState({ isLoading: true });
+        var userBetObj = { games: this.state.games, user: this.state.currentUser }
+        axios.post('/bet/saveBet', userBetObj).then(response => {
+            console.log(response);
+            this.setState({ isLoading: false });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    updateUserBet(games) {
+        this.setState({ games: games});
+    }
+
     render() {
         return (
             <div className="bet-container">
-                {this.state.isLoading ? <Loader isLoading={this.state.isLoading} /> : <Games games={this.state.games} />}
+                <button onClick={this.saveTheBet} className="tb-btn save-button">SAVE BET</button>
+                {this.state.isLoading ? <Loader isLoading={this.state.isLoading} /> : <Games games={this.state.games} updateUserBet={this.updateUserBet} />}
             </div>
         );
     }

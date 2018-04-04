@@ -7,7 +7,7 @@ using System.Web;
 namespace TheBet.Entities
 {
     [DataContract]
-    public class TheBetResponse
+    public class TheBetEntity
     {
         [DataMember(Name = "gameList")]
         public List<GameEntity> gameList;

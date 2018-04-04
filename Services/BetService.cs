@@ -19,7 +19,7 @@ namespace TheBet.Services
             userRepository = new UserRepository();
         }
 
-        public TheBetResponse GetTheBet(User user)
+        public TheBetEntity GetTheBet(User user)
         {
             try { 
                 var games = gameRepository.GetAllGames();
@@ -60,11 +60,53 @@ namespace TheBet.Services
 
                     gameList.Add(newGame);
                 }
-                return new TheBetResponse() { gameList = gameList };
+                return new TheBetEntity() { gameList = gameList };
             }
             catch (Exception ex)
             {
-                return new TheBetResponse() { Exception = ex.InnerException.Message, ErrorMsg = "Error in BetService Get the BEt" };
+                return new TheBetEntity() { Exception = ex.InnerException.Message, ErrorMsg = "Error in BetService Get the BEt" };
+            }
+        }
+
+
+        public TheBetEntity SaveBet(UserBetEntity userBet)
+        {
+            try
+            {
+                var games = gameRepository.GetAllGames();
+                var gamesToSubmit = userBet.games.Where(x => x.OpenForBet && x.UserTeam1Goals != null && x.UserTeam2Goals != null).ToList();
+                if ((gamesToSubmit == null || gamesToSubmit.Count == 0))
+                {
+                    return new TheBetEntity() { ErrorMsg = "Error in BetService Save the BEt, NO USER INPUT TO SAVE" };
+                }
+                else if (userBet.user == null || userBet.user.Id <= 0)
+                {
+                    return new TheBetEntity() { ErrorMsg = "Error in BetService Save the BEt, MISSING USER ID" };
+                }
+
+                foreach(var game in gamesToSubmit)
+                {
+                    foreach(var gameToCheck in games)
+                    {
+                        if(game.GameId == gameToCheck.Id)
+                        {
+                            if (!gameToCheck.OpenForBet)
+                            {
+                                return new TheBetEntity() { ErrorMsg = "Error in BetService Save the BEt, A GAME NOT OPEN FOR BET HAVE BEEN SUBMITTED. GameID = " + gameToCheck.Id };
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                return userRepository.SaveUserBet(gamesToSubmit, userBet.user.Id);
+            }
+            catch (Exception ex)
+            {
+                return new TheBetEntity() { Exception = ex.InnerException.Message, ErrorMsg = "Error in BetService Save the BEt" };
             }
         }
 

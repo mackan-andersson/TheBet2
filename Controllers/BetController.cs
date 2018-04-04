@@ -12,10 +12,19 @@ namespace TheBet.Controllers
     {
         [Route("bet/getTheBet")]
         [HttpPost]
-        public TheBetResponse GetTheBet(User user)
+        public TheBetEntity GetTheBet(User user)
         {
             var betService = new TheBet.Services.BetService();
             var theBet = betService.GetTheBet(user);
+            return theBet;
+        }
+
+        [Route("bet/saveBet")]
+        [HttpPost]
+        public TheBetEntity SaveBet(UserBetEntity userBet)
+        {
+            var betService = new TheBet.Services.BetService();
+            var theBet = betService.SaveBet(userBet);
             return theBet;
         }
     }

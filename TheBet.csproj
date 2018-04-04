@@ -127,6 +127,7 @@
     <Content Include="Content\Scripts\Components\loader.jsx" />
     <Content Include="Content\Scripts\Pages\bet.jsx" />
     <Content Include="Content\Scripts\Pages\contact.jsx" />
+    <Content Include="Content\Scripts\Pages\faq.jsx" />
     <Content Include="Content\Scripts\Pages\home.jsx" />
     <Content Include="Content\Scripts\main.js" />
     <Content Include="Content\Scripts\main.jsx" />
@@ -205,7 +206,8 @@
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Entities\GameEntity.cs" />
-    <Compile Include="Entities\TheBetResponse.cs" />
+    <Compile Include="Entities\TheBetEntity.cs" />
+    <Compile Include="Entities\UserBetEntity.cs" />
     <Compile Include="Entities\UserResponse.cs" />
     <Compile Include="Game.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>

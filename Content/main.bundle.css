@@ -23,8 +23,8 @@
   text-align: center;
   background-color: #ffc430; }
   .header-container h1 {
-    font-size: 36px;
-    font-family: AmaticSC-Bold; }
+    font-size: 24px;
+    font-family: Comfortaa-Bold; }
 
 @font-face {
   font-family: 'AmaticSC-Bold';
@@ -59,26 +59,22 @@
   background-color: rgba(255, 255, 255, 0.5); }
   .footer-container .tb-btn {
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     padding: 0;
-    font-size: 18px;
+    font-size: 10px;
     margin: 0 5px;
     background-color: #000;
     color: #ffc430; }
     .footer-container .tb-btn.active {
       background-color: #ffc430;
       color: #000; }
-  .footer-container .extra-choices-container {
+    .footer-container .tb-btn.hidden {
+      visibility: hidden;
+      pointer-events: none; }
+  .footer-container .button-container {
     display: inline-block;
     position: relative; }
-    .footer-container .extra-choices-container .extra-choices {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      top: -100px;
-      height: 100px;
-      justify-content: space-around; }
 
 .login-form-container, .register-form-container {
   margin-top: 32px;
@@ -96,6 +92,13 @@
 
 .register-form-container {
   display: none; }
+
+.bet-container {
+  position: relative; }
+  .bet-container .save-button {
+    position: fixed;
+    top: 10px;
+    right: 10px; }
 
 @font-face {
   font-family: 'AmaticSC-Bold';
@@ -339,7 +342,7 @@ h1, h2, h3, p, span, a {
   text-decoration: none; }
 
 h1 {
-  font-family: AmaticSC-Bold; }
+  font-family: Comfortaa-Bold; }
 
 h2 {
   margin-bottom: 24px;
@@ -379,7 +382,8 @@ input[type="text"], .tb-input, .tb-btn {
   padding: 8px;
   border: solid 1px black;
   display: inline-block;
-  font-family: AmaticSC-Bold; }
+  font-family: Comfortaa-Bold;
+  background-color: #fff; }
   .tb-btn:hover {
     cursor: pointer; }
 

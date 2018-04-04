@@ -1,6 +1,4 @@
 ﻿import React, { Component } from "react";
-import Moment from "moment";
-
 
 class Loader extends Component {
     constructor(props) {
