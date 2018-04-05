@@ -1,6 +1,7 @@
 ﻿import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import { Redirect } from 'react-router';
+import Loader from "../Components/loader.jsx";
 var axios = require('axios');
 
 class LoginRegister extends Component {
@@ -12,7 +13,8 @@ class LoginRegister extends Component {
             registerName: '',
             registerPassword: '',
             registerEmail: '',
-            isLoginToggled: true
+            isLoginToggled: true,
+            isLoading: false
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.registerAndLogin = this.registerAndLogin.bind(this);
@@ -30,8 +32,10 @@ class LoginRegister extends Component {
     }
 
     login() {
+        this.setState({ isLoading: true });
         const user = { Name: this.state.loginName, Password: this.state.loginPassword};
         axios.post('/user/login', user).then(response => {
+            this.setState({ isLoading: false });
             if(response.data.user !== null) {
                 this.props.setCurrentUserInRoot(response.data.user);
             }
@@ -41,8 +45,10 @@ class LoginRegister extends Component {
     }
 
     registerAndLogin() {
+        this.setState({ isLoading: true });
         const user = { Name: this.state.registerName, Password: this.state.registerPassword, Email: this.state.registerEmail };
         axios.post('/user/register', user).then(function (response) {
+            this.setState({ isLoading: false });
             console.log(response);
             if (response.data.user !== null) {
                 this.props.setCurrentUserInRoot(response.data.user);

@@ -29,22 +29,8 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="QuestionText" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="QuestionType" Type="int" />
-  </EntityType>
-  <EntityType Name="QuestionAnswer">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="QuestionId" Type="int" Nullable="false" />
-    <Property Name="Answer" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="QuestionType">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QuestionType" Type="varchar" MaxLength="100" />
+    <Property Name="QuestionRightAnswer" Type="int" />
   </EntityType>
   <EntityType Name="Stage">
     <Key>
@@ -52,6 +38,13 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" />
   </EntityType>
   <EntityType Name="Team">
     <Key>
@@ -83,15 +76,24 @@
     <Property Name="UserTeam2Goals" Type="int" />
     <Property Name="Points" Type="int" />
   </EntityType>
+  <EntityType Name="UserQuestionAnswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="QuestionId" Type="int" />
+    <Property Name="Answer" Type="int" />
+  </EntityType>
   <EntityContainer Name="theBetDBModelStoreContainer">
     <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Question" EntityType="Self.Question" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="QuestionAnswer" EntityType="Self.QuestionAnswer" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="QuestionType" EntityType="Self.QuestionType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stage" EntityType="Self.Stage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserBet" EntityType="Self.UserBet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserQuestionAnswer" EntityType="Self.UserQuestionAnswer" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

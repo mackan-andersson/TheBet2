@@ -1,0 +1,26 @@
+﻿@import '../Variables/colors.scss';
+
+.login-form-container, .register-form-container {
+    margin-top: 32px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .tb-form-field {
+        width: 80%;
+    }
+
+    .tb-btn-container{
+        margin-top:8px;
+        .tb-btn-link{
+            margin-right:16px;
+        }
+    } 
+    h2 {
+        white-space: nowrap;
+    }
+}
+
+.register-form-container{
+    display:none;
+}

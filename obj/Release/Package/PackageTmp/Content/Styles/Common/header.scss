@@ -1,0 +1,13 @@
+﻿@import '../Variables/colors.scss';
+@import '../Variables/fonts.scss';
+
+.header-container {
+    width: 100%;
+    text-align:center;
+    background-color:$color-primary;
+    h1{
+        font-size:24px;
+        font-family:Comfortaa-Bold;
+    }
+}
+

@@ -13,6 +13,7 @@ class Content extends Component {
         this.state = {
             activeContent: this.props.activeContent
         };
+        this.goToFAQ = this.goToFAQ.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -21,8 +22,13 @@ class Content extends Component {
         }
     }
 
+    goToFAQ() {
+        console.log("goToFAQ");
+    }
+
     render() {
         const activeContent = this.state.activeContent;
+        const goToFaq = this.state.goToFAQ;
         function contentToRender() {
             if (activeContent.bet) {
                 return <Bet />;
@@ -37,7 +43,7 @@ class Content extends Component {
                 return <FAQ />;
             }
             else {
-                return <Home />;
+                return <Home goToFAQ={goToFaq} />;
             }
         }
         return (

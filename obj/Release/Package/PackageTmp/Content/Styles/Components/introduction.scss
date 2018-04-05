@@ -1,0 +1,18 @@
+﻿@import "../Variables/colors.scss";
+.intro-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 460px;
+    margin-top: 48px;
+    text-align: center;
+
+    h3 {
+        margin: 0;
+        padding-top: 16px;
+        border-top: 1px solid $color-grey;
+    }
+
+    p {
+        margin: 8px 0 16px 0;
+    }
+}

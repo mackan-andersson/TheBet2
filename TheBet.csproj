@@ -88,6 +88,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\app-bundle.js" />
     <Content Include="Content\Images\ar.svg" />
     <Content Include="Content\Images\au.svg" />
     <Content Include="Content\Images\be.svg" />
@@ -120,10 +121,13 @@
     <Content Include="Content\Images\sn.svg" />
     <Content Include="Content\Images\tn.svg" />
     <Content Include="Content\Images\uy.svg" />
+    <Content Include="Content\main.bundle.css" />
     <Content Include="Content\Scripts\Common\content.jsx" />
     <Content Include="Content\Scripts\Common\footer.jsx" />
     <Content Include="Content\Scripts\Common\header.jsx" />
+    <Content Include="Content\Scripts\Components\deadlines.jsx" />
     <Content Include="Content\Scripts\Components\games.jsx" />
+    <Content Include="Content\Scripts\Components\introduction.jsx" />
     <Content Include="Content\Scripts\Components\loader.jsx" />
     <Content Include="Content\Scripts\Pages\bet.jsx" />
     <Content Include="Content\Scripts\Pages\contact.jsx" />
@@ -171,6 +175,7 @@
     <Content Include="Content\Fonts\Comfortaa-Bold.ttf" />
     <Content Include="Content\Fonts\Comfortaa-Light.ttf" />
     <Content Include="Content\Fonts\Comfortaa-Regular.ttf" />
+    <Content Include="Content\Styles\Components\introduction.scss" />
     <None Include="Content\Styles\Variables\icons.scss" />
     <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.eot" />
     <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.ttf" />
@@ -185,6 +190,8 @@
     <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\thebet - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TheBet20180405072058 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,17 +225,14 @@
     <Compile Include="Question.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuestionAnswer.cs">
-      <DependentUpon>TheBetEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuestionType.cs">
-      <DependentUpon>TheBetEF.tt</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\GameRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\BetService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Stage.cs">
+      <DependentUpon>TheBetEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Team.cs">
@@ -259,6 +263,9 @@
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
     <Compile Include="UserBet.cs">
+      <DependentUpon>TheBetEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserQuestionAnswer.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
   </ItemGroup>

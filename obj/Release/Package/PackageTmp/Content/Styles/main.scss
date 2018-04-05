@@ -1,0 +1,115 @@
+﻿@import "Common/header.scss";
+@import "Common/footer.scss";
+@import "Pages/loginRegister.scss";
+@import "Pages/bet.scss";
+@import "Components/games.scss";
+@import "Components/loader.scss";
+@import "Components/introduction.scss";
+@import "Variables/colors.scss";
+@import "Variables/fonts.scss";
+@import "Variables/icons.scss";
+
+
+html, body, .main-container{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family:Comfortaa-Regular;
+    font-style: normal;
+}
+
+h1, h2, h3, p, span, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.content-container{
+    margin-bottom:76px;
+}
+
+h1 {
+    font-family: Comfortaa-Bold;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 22px;
+}
+
+
+input[type="text"],.tb-input,.tb-btn {
+    -webkit-appearance:none;
+}
+
+.tb-input {
+    border: 0;
+    border-bottom: 1px solid $color-grey;
+    font-family: Comfortaa-Regular;
+    color: $color-black;
+    position: relative;
+    font-size:16px;
+    &:focus {
+        border-bottom: 1px solid $color-black;
+        outline:none;
+    }
+    &:after{
+        content:none;
+        margin:0;
+        padding:0;
+    }
+}
+
+.tb-form-field {
+    margin-bottom:12px;
+    width:100%;
+    label {
+        color: $color-grey;
+        font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+        display: block;
+    }
+
+    input:focus + label {
+        color: $color-black;
+    }
+}
+
+.tb-btn {
+    padding: 8px;
+    border: solid 1px black;
+    display: inline-block;
+    font-family: Comfortaa-Bold;
+    background-color:$color-white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.tb-btn-link {
+    color:$color-black;
+    text-decoration:underline;
+    text-decoration-skip:ink;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.mobile-hide {
+    display: none;
+}
+
+.content-container{
+    padding-bottom:56px;
+}
+
+@media only screen and (min-width: 600px) {
+}

@@ -4,6 +4,7 @@
 @import "Pages/bet.scss";
 @import "Components/games.scss";
 @import "Components/loader.scss";
+@import "Components/introduction.scss";
 @import "Variables/colors.scss";
 @import "Variables/fonts.scss";
 @import "Variables/icons.scss";
@@ -25,6 +26,10 @@ h1, h2, h3, p, span, a {
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+.content-container{
+    margin-bottom:76px;
 }
 
 h1 {

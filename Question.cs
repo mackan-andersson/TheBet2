@@ -16,6 +16,7 @@ namespace TheBet
     {
         public int Id { get; set; }
         public string QuestionText { get; set; }
-        public Nullable<int> QuestionType { get; set; }
+        public string QuestionType { get; set; }
+        public Nullable<int> QuestionRightAnswer { get; set; }
     }
 }

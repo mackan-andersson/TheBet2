@@ -1,0 +1,417 @@
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
+
+.header-container {
+  width: 100%;
+  text-align: center;
+  background-color: #ffc430; }
+  .header-container h1 {
+    font-size: 24px;
+    font-family: Comfortaa-Bold; }
+
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .footer-container .tb-btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    font-size: 10px;
+    margin: 0 5px;
+    background-color: #000;
+    color: #ffc430; }
+    .footer-container .tb-btn.active {
+      background-color: #ffc430;
+      color: #000; }
+    .footer-container .tb-btn.hidden {
+      visibility: hidden;
+      pointer-events: none; }
+  .footer-container .button-container {
+    display: inline-block;
+    position: relative; }
+
+.login-form-container, .register-form-container {
+  margin-top: 32px;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  .login-form-container .tb-form-field, .register-form-container .tb-form-field {
+    width: 80%; }
+  .login-form-container .tb-btn-container, .register-form-container .tb-btn-container {
+    margin-top: 8px; }
+    .login-form-container .tb-btn-container .tb-btn-link, .register-form-container .tb-btn-container .tb-btn-link {
+      margin-right: 16px; }
+  .login-form-container h2, .register-form-container h2 {
+    white-space: nowrap; }
+
+.register-form-container {
+  display: none; }
+
+.bet-container {
+  position: relative; }
+  .bet-container .save-button {
+    position: fixed;
+    top: 10px;
+    right: 10px; }
+
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
+
+.games-container {
+  font-family: Comfortaa-Regular; }
+  .games-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .games-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0; }
+  .games-container li:nth-child(odd) {
+    background-color: #f5f5f5; }
+  .games-container .game-info {
+    font-size: 12px;
+    justify-content: center;
+    margin-bottom: 10px; }
+  .games-container .game-info, .games-container .teams-container {
+    display: flex;
+    width: 360px; }
+  .games-container .teams-container .team-container {
+    width: 50%; }
+    .games-container .teams-container .team-container:first-of-type {
+      text-align: right; }
+  .games-container .teams-container label {
+    font-size: 18px; }
+  .games-container .teams-container input {
+    width: 36px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 8px;
+    background-color: transparent;
+    z-index: 1;
+    font-family: Comfortaa-Bold; }
+  .games-container .teams-container .flag.before:before {
+    top: -8px;
+    left: 9px; }
+  .games-container .teams-container .flag.after:before {
+    top: -8px;
+    right: 9px; }
+  .games-container .vs-span {
+    font-size: 20px; }
+  .games-container input[type=number]::-webkit-inner-spin-button,
+  .games-container input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
+
+.loader-container {
+  text-align: center; }
+  .loader-container .spinner-container {
+    margin: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px; }
+    .loader-container .spinner-container i {
+      margin-bottom: 16px; }
+
+.intro-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+  margin-top: 48px;
+  text-align: center; }
+  .intro-container h3 {
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px solid #d1d1d1; }
+  .intro-container p {
+    margin: 8px 0 16px 0; }
+
+@font-face {
+  font-family: 'AmaticSC-Bold';
+  src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AmaticSC-Regular';
+  src: url("/Content/Fonts/AmaticSC-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url("/Content/Fonts/Comfortaa-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url("/Content/Fonts/Comfortaa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url("/Content/Fonts/Comfortaa-Bold.ttf") format("truetype"); }
+
+.flag {
+  position: relative; }
+  .flag:before {
+    position: absolute;
+    display: inline-block;
+    content: ' ';
+    background-size: 34px 24px;
+    height: 24px;
+    width: 34px;
+    opacity: .2;
+    border: solid 0.5px #d1d1d1; }
+
+.Argentina:before {
+  background-image: url("/Content/Images/ar.svg"); }
+
+.Australia:before {
+  background-image: url("/Content/Images/au.svg"); }
+
+.Belgium:before {
+  background-image: url("/Content/Images/be.svg"); }
+
+.Brazil:before {
+  background-image: url("/Content/Images/br.svg"); }
+
+.Colombia:before {
+  background-image: url("/Content/Images/co.svg"); }
+
+.Costa:before {
+  background-image: url("/Content/Images/cr.svg"); }
+
+.Croatia:before {
+  background-image: url("/Content/Images/hr.svg"); }
+
+.Denmark:before {
+  background-image: url("/Content/Images/dk.svg"); }
+
+.Egypt:before {
+  background-image: url("/Content/Images/eg.svg"); }
+
+.France:before {
+  background-image: url("/Content/Images/fr.svg"); }
+
+.Germany:before {
+  background-image: url("/Content/Images/de.svg"); }
+
+.Spain:before {
+  background-image: url("/Content/Images/es.svg"); }
+
+.England:before {
+  background-image: url("/Content/Images/gb-eng.svg"); }
+
+.Iran:before {
+  background-image: url("/Content/Images/ir.svg"); }
+
+.Iceland:before {
+  background-image: url("/Content/Images/is.svg"); }
+
+.Japan:before {
+  background-image: url("/Content/Images/jp.svg"); }
+
+.Korea:before {
+  background-image: url("/Content/Images/kr.svg"); }
+
+.Morocco:before {
+  background-image: url("/Content/Images/ma.svg"); }
+
+.Mexico:before {
+  background-image: url("/Content/Images/mx.svg"); }
+
+.Panama:before {
+  background-image: url("/Content/Images/pa.svg"); }
+
+.Peru:before {
+  background-image: url("/Content/Images/pe.svg"); }
+
+.Poland:before {
+  background-image: url("/Content/Images/pl.svg"); }
+
+.Portugal:before {
+  background-image: url("/Content/Images/pt.svg"); }
+
+.Serbia:before {
+  background-image: url("/Content/Images/rs.svg"); }
+
+.Russia:before {
+  background-image: url("/Content/Images/ru.svg"); }
+
+.Switzerland:before {
+  background-image: url("/Content/Images/ch.svg"); }
+
+.Saudi:before {
+  background-image: url("/Content/Images/sa.svg"); }
+
+.Sweden:before {
+  background-image: url("/Content/Images/se.svg"); }
+
+.Senegal:before {
+  background-image: url("/Content/Images/sn.svg"); }
+
+.Tunisia:before {
+  background-image: url("/Content/Images/tn.svg"); }
+
+.Uruguay:before {
+  background-image: url("/Content/Images/uy.svg"); }
+
+.Nigeria:before {
+  background-image: url("/Content/Images/ng.svg"); }
+
+html, body, .main-container {
+  height: 100%;
+  width: 100%; }
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: Comfortaa-Regular;
+  font-style: normal; }
+
+h1, h2, h3, p, span, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+.content-container {
+  margin-bottom: 76px; }
+
+h1 {
+  font-family: Comfortaa-Bold; }
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 22px; }
+
+input[type="text"], .tb-input, .tb-btn {
+  -webkit-appearance: none; }
+
+.tb-input {
+  border: 0;
+  border-bottom: 1px solid #d1d1d1;
+  font-family: Comfortaa-Regular;
+  color: #000;
+  position: relative;
+  font-size: 16px; }
+  .tb-input:focus {
+    border-bottom: 1px solid #000;
+    outline: none; }
+  .tb-input:after {
+    content: none;
+    margin: 0;
+    padding: 0; }
+
+.tb-form-field {
+  margin-bottom: 12px;
+  width: 100%; }
+  .tb-form-field label {
+    color: #d1d1d1;
+    font-size: 12px; }
+  .tb-form-field input {
+    width: 100%;
+    display: block; }
+  .tb-form-field input:focus + label {
+    color: #000; }
+
+.tb-btn {
+  padding: 8px;
+  border: solid 1px black;
+  display: inline-block;
+  font-family: Comfortaa-Bold;
+  background-color: #fff; }
+  .tb-btn:hover {
+    cursor: pointer; }
+
+.tb-btn-link {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-skip: ink; }
+  .tb-btn-link:hover {
+    cursor: pointer; }
+
+.mobile-hide {
+  display: none; }
+
+.content-container {
+  padding-bottom: 56px; }

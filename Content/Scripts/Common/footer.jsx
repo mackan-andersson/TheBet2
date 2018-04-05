@@ -65,7 +65,7 @@ class Footer extends Component {
         const activeContent = this.state.activeContent;
         const requestContact = this.requestContact;
         const logoutFunc = this.logout;
-        const requestHome = this.requestTable;
+        const requestHome = this.requestHome;
         const requestBet = this.requestBet;
         const requestTable = this.requestTable;
         const requestFAQ = this.requestFAQ;
@@ -88,7 +88,6 @@ class Footer extends Component {
         return (
             <div className="footer-container">
                 <nav>
-                    
                     {showButtons()}
                     <button className={"tb-btn " + (this.state.isExtraChoicesToggled ? 'active' : '')} onClick={this.toggleExtraChoices}><span>...</span></button>
                 </nav>

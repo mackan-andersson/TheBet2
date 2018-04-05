@@ -28,11 +28,11 @@ namespace TheBet
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Game> Game { get; set; }
         public virtual DbSet<Player> Player { get; set; }
-        public virtual DbSet<QuestionAnswer> QuestionAnswer { get; set; }
-        public virtual DbSet<QuestionType> QuestionType { get; set; }
         public virtual DbSet<Stage> Stage { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserBet> UserBet { get; set; }
+        public virtual DbSet<Table> Table { get; set; }
+        public virtual DbSet<UserQuestionAnswer> UserQuestionAnswer { get; set; }
         public virtual DbSet<Question> Question { get; set; }
     }
 }

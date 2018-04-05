@@ -198,6 +198,19 @@
     .loader-container .spinner-container i {
       margin-bottom: 16px; }
 
+.intro-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+  margin: 48px 16px 0;
+  text-align: center; }
+  .intro-container h3 {
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px solid #d1d1d1; }
+  .intro-container p {
+    margin: 8px 0 16px 0; }
+
 @font-face {
   font-family: 'AmaticSC-Bold';
   src: url("/Content/Fonts/AmaticSC-Bold.ttf") format("truetype"); }
@@ -340,6 +353,9 @@ h1, h2, h3, p, span, a {
   margin: 0;
   padding: 0;
   text-decoration: none; }
+
+.content-container {
+  margin-bottom: 76px; }
 
 h1 {
   font-family: Comfortaa-Bold; }

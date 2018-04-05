@@ -35,23 +35,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="QuestionAnswer">
-      <EntityTypeMapping TypeName="theBetDBModel.QuestionAnswer">
-        <MappingFragment StoreEntitySet="QuestionAnswer">
-          <ScalarProperty Name="Answer" ColumnName="Answer" />
-          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="QuestionType">
-      <EntityTypeMapping TypeName="theBetDBModel.QuestionType">
-        <MappingFragment StoreEntitySet="QuestionType">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Stage">
       <EntityTypeMapping TypeName="theBetDBModel.Stage">
         <MappingFragment StoreEntitySet="Stage">
@@ -84,9 +67,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="theBetDBModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserQuestionAnswer">
+      <EntityTypeMapping TypeName="theBetDBModel.UserQuestionAnswer">
+        <MappingFragment StoreEntitySet="UserQuestionAnswer">
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Question">
       <EntityTypeMapping TypeName="theBetDBModel.Question">
         <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="QuestionRightAnswer" ColumnName="QuestionRightAnswer" />
           <ScalarProperty Name="QuestionType" ColumnName="QuestionType" />
           <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
           <ScalarProperty Name="Id" ColumnName="Id" />
