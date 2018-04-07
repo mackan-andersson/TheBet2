@@ -48,5 +48,8 @@ namespace TheBet.Entities
         [DataMember(Name = "userTeam2Goals")]
         public int? UserTeam2Goals;
 
+        [DataMember(Name = "points")]
+        public int? Points;
+
     }
 }

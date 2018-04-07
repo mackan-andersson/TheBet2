@@ -9,7 +9,7 @@ class Loader extends Component {
         return (
             <div className="loader-container">
                 <div className="spinner-container">
-                    <i className="fas fa-spinner fa-spin"></i>
+                    <i className="fa fa-spinner fa-spin" />
                     <span>LOADING</span>
                 </div>
             </div>

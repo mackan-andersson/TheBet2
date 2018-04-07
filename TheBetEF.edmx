@@ -57,7 +57,6 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Group" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -89,6 +88,7 @@
           <Property Name="UserId" Type="int" />
           <Property Name="QuestionId" Type="int" />
           <Property Name="Answer" Type="int" />
+          <Property Name="Points" Type="int" />
         </EntityType>
         <EntityContainer Name="theBetDBModelStoreContainer">
           <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
@@ -111,7 +111,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Group" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="theBetDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Team" EntityType="Self.Team" />
@@ -191,6 +190,7 @@
           <Property Name="UserId" Type="Int32" />
           <Property Name="QuestionId" Type="Int32" />
           <Property Name="Answer" Type="Int32" />
+          <Property Name="Points" Type="Int32" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
@@ -212,7 +212,6 @@
               <MappingFragment StoreEntitySet="Team">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Group" ColumnName="Group" />
                 </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -284,6 +283,7 @@
           <EntitySetMapping Name="UserQuestionAnswer">
             <EntityTypeMapping TypeName="theBetDBModel.UserQuestionAnswer">
               <MappingFragment StoreEntitySet="UserQuestionAnswer">
+                <ScalarProperty Name="Points" ColumnName="Points" />
                 <ScalarProperty Name="Answer" ColumnName="Answer" />
                 <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />

@@ -6,7 +6,6 @@
         <MappingFragment StoreEntitySet="Team">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Group" ColumnName="Group" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -78,6 +77,7 @@
     <EntitySetMapping Name="UserQuestionAnswer">
       <EntityTypeMapping TypeName="theBetDBModel.UserQuestionAnswer">
         <MappingFragment StoreEntitySet="UserQuestionAnswer">
+          <ScalarProperty Name="Points" ColumnName="Points" />
           <ScalarProperty Name="Answer" ColumnName="Answer" />
           <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />

@@ -86,6 +86,15 @@ namespace TheBet.Repositories
             }
         }
 
+        public List<UserQuestionAnswer> GetUserQuestions(User user)
+        {
+            using (var context = new theBetDBEntities())
+            {
+                var userQuestions = context.UserQuestionAnswer.Where(u => u.UserId == user.Id).ToList();
+                return userQuestions;
+            }
+        }
+
         public TheBetEntity SaveUserBet(List<GameEntity> gameList, int userId)
         {
             using (var context = new theBetDBEntities())

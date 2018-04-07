@@ -52,7 +52,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Group" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -84,6 +83,7 @@
     <Property Name="UserId" Type="int" />
     <Property Name="QuestionId" Type="int" />
     <Property Name="Answer" Type="int" />
+    <Property Name="Points" Type="int" />
   </EntityType>
   <EntityContainer Name="theBetDBModelStoreContainer">
     <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />

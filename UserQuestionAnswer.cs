@@ -18,5 +18,6 @@ namespace TheBet
         public Nullable<int> UserId { get; set; }
         public Nullable<int> QuestionId { get; set; }
         public Nullable<int> Answer { get; set; }
+        public Nullable<int> Points { get; set; }
     }
 }

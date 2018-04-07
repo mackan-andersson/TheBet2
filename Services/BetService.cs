@@ -12,12 +12,16 @@ namespace TheBet.Services
         private static GameRepository gameRepository;
         private static TeamRepository teamRepository;
         private static UserRepository userRepository;
+        private static StageRepository stageRepository;
+        private static QuestionRepository questionRepository;
         public BetService()
         {
             gameRepository = new GameRepository();
             teamRepository = new TeamRepository();
             userRepository = new UserRepository();
-        }
+            stageRepository = new StageRepository();
+            questionRepository = new QuestionRepository();
+    }
 
         public TheBetEntity GetTheBet(User user)
         {
@@ -53,6 +57,7 @@ namespace TheBet.Services
                             {
                                 newGame.UserTeam1Goals = userBet.UserTeam1Goals;
                                 newGame.UserTeam2Goals = userBet.UserTeam2Goals;
+                                newGame.Points = userBet.Points;
                             }
                         }
                     }
@@ -107,6 +112,50 @@ namespace TheBet.Services
             catch (Exception ex)
             {
                 return new TheBetEntity() { Exception = ex.InnerException.Message, ErrorMsg = "Error in BetService Save the BEt" };
+            }
+        }
+
+        public QuestionCollectionEntity GetQuestions(User user)
+        {
+            try
+            {
+                List<UserQuestionAnswer> userQuestions = null;
+                if (user != null)
+                {
+                    userQuestions = userRepository.GetUserQuestions(user);
+                }
+                var allQuestions = questionRepository.GetAllQuestions();
+                var questionList = new List<QuestionEntity>();
+                foreach (var question in allQuestions)
+                {
+                    var newQuestion = new QuestionEntity()
+                    {
+                        questionId = question.Id,
+                        questionText = question.QuestionText,
+                        questionType = question.QuestionType,
+                        questionRightAnswer = question.QuestionRightAnswer
+                    };
+                    if (user != null && userQuestions != null)
+                    {
+                        newQuestion.userId = user.Id;
+                        foreach (var userQuestion in userQuestions)
+                        {
+                            if (question.Id == userQuestion.QuestionId)
+                            {
+                                newQuestion.userAnswer = userQuestion.Answer;
+                                newQuestion.Points = userQuestion.Points;
+                            }
+                        }
+                    }
+                    questionList.Add(newQuestion);
+                }
+                var stages = stageRepository.GetAllStages();
+                var teams = teamRepository.GetAllTeams();
+                return new QuestionCollectionEntity() { questions = questionList, stages = stages, teams = teams };
+            }
+            catch (Exception ex)
+            {
+                return new QuestionCollectionEntity() { Exception = ex.InnerException.Message, ErrorMsg = "Error in BetService Save the BEt" };
             }
         }
 

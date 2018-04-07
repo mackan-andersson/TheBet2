@@ -27,5 +27,14 @@ namespace TheBet.Controllers
             var theBet = betService.SaveBet(userBet);
             return theBet;
         }
+
+        [Route("bet/getQuestions")]
+        [HttpPost]
+        public QuestionCollectionEntity GetQuestions(User user)
+        {
+            var betService = new TheBet.Services.BetService();
+            var theBet = betService.GetQuestions(user);
+            return theBet;
+        }
     }
 }

@@ -129,6 +129,7 @@
     <Content Include="Content\Scripts\Components\games.jsx" />
     <Content Include="Content\Scripts\Components\introduction.jsx" />
     <Content Include="Content\Scripts\Components\loader.jsx" />
+    <Content Include="Content\Scripts\Components\questions.jsx" />
     <Content Include="Content\Scripts\Pages\bet.jsx" />
     <Content Include="Content\Scripts\Pages\contact.jsx" />
     <Content Include="Content\Scripts\Pages\faq.jsx" />
@@ -138,10 +139,6 @@
     <Content Include="Content\Scripts\Pages\loginRegister.jsx" />
     <Content Include="Content\Scripts\Pages\table.jsx" />
     <Content Include="Content\Scripts\Vendor\jquery.min.js" />
-    <Content Include="Content\Styles\Vendor\font-awesome\css\fontawesome-all.min.css" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.svg" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.svg" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.svg" />
     <Content Include="TheBetEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TheBetEF.Context.cs</LastGenOutput>
@@ -177,18 +174,6 @@
     <Content Include="Content\Fonts\Comfortaa-Regular.ttf" />
     <Content Include="Content\Styles\Components\introduction.scss" />
     <None Include="Content\Styles\Variables\icons.scss" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.eot" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.ttf" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.woff" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-brands-400.woff2" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.eot" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.ttf" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.woff" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-regular-400.woff2" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.eot" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.ttf" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff" />
-    <Content Include="Content\Styles\Vendor\font-awesome\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\thebet - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TheBet20180405072058 - Web Deploy.pubxml" />
@@ -213,8 +198,11 @@
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Entities\GameEntity.cs" />
+    <Compile Include="Entities\QuestionCollectionEntity.cs" />
+    <Compile Include="Entities\QuestionEntity.cs" />
     <Compile Include="Entities\TheBetEntity.cs" />
     <Compile Include="Entities\UserBetEntity.cs" />
+    <Compile Include="Entities\UserQuestionEntity.cs" />
     <Compile Include="Entities\UserResponse.cs" />
     <Compile Include="Game.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>
@@ -226,8 +214,11 @@
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
     <Compile Include="Repositories\GameRepository.cs" />
+    <Compile Include="Repositories\QuestionRepository.cs" />
+    <Compile Include="Repositories\StageRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\BetService.cs" />
+    <Compile Include="Services\StageService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Stage.cs">
       <DependentUpon>TheBetEF.tt</DependentUpon>
@@ -269,7 +260,9 @@
       <DependentUpon>TheBetEF.tt</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\Styles\Vendor\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
